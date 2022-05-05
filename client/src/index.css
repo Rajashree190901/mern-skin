@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Source Code Pro", monospace !important;
+  padding: 3px;
+  font-weight: bolder;
+}
+.nav-link {
+  color: purple !important;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.navbar-brand {
+  color: purple !important;
+  font-weight: bolder !important;
+  font-size: 20px !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+h1 {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+.img-fluid {
+  height: 150px;
+  width: 200px;
+}
+.flex-container {
+  display: flex !important;
+}
+.btn {
+  background-color: rgb(142, 5, 142) !important;
+  color: white !important;
+  size: 100px;
+}
