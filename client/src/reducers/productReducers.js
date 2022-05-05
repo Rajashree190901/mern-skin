@@ -6,13 +6,14 @@ export const getAllProductsReducer = (state = { products: [] }, action) => {
         ...state,
       };
     case "GET_PRODUCTS_SUCCESS":
+      console.log(action.payload);
       return {
         loading: false,
-        products: action.playload,
+        products: action.payload,
       };
     case "GET_PRODUCTS_FAILED":
       return {
-        error: action.playload,
+        error: action.payload,
         loading: false,
       };
     default:

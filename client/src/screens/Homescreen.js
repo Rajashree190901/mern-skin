@@ -6,13 +6,13 @@ import Product from "../components/Product";
 export default function Homescreen() {
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, []);
   const productsstate = useSelector((state) => state.getAllProductsReducer);
 
   const { products, error, loading } = productsstate;
 
-  useEffect(() => {
-    dispatch(getAllProducts());
-  }, []);
   console.log(products);
   return (
     <div>
