@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../actions/productActions";
+import Loading from "../components/Loading";
 import Product from "../components/Product";
+import Error from "../components/Error";
 
 export default function Homescreen() {
   const dispatch = useDispatch();
@@ -18,13 +20,13 @@ export default function Homescreen() {
     <div>
       <div className="row">
         {loading ? (
-          <h1>loading...</h1>
+          <Loading />
         ) : error ? (
-          <h1>something went wrong</h1>
+          <Error error="something went wrong" />
         ) : (
           products.map((product) => {
             return (
-              <div className="col-md-4 p-11">
+              <div className="col-md-4 p-11" key={product._id}>
                 <div>
                   <Product product={product} />
                 </div>

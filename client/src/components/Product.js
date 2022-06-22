@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import { Modal } from "bootstrap";
-
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../actions/cartActions";
 //usestate is imported to know what the user have selected.
 // we are going to receive the properties as product.
 export default function Product({ product }) {
   const [quantity, setquantity] = useState(1);
   const [varient, setvarient] = useState("100gm");
+  const [show, setShow] = useState(false);
+
+  const dispatch = useDispatch();
+
+  function addtocart() {
+    dispatch(addToCart(product, quantity, varient));
+  }
 
   return (
     <div className="m-3 shadow p-3 mb-5 bg-white rounded">
@@ -51,7 +59,9 @@ export default function Product({ product }) {
           </p>
         </div>
         <div className="m-1 w-100">
-          <button className="btn">Add to cart</button>
+          <button className="btn" onClick={addtocart}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

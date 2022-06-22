@@ -5,10 +5,13 @@ const app = express();
 
 app.use(express.json());
 const productsRoute = require("./routes/productsRoute");
+const userRoute = require("./routes/userRoute");
+
+app.use("/api/products/", productsRoute);
+app.use("/api/users/", userRoute);
 app.get("/", (req, res) => {
   res.send("server is working" + port);
 });
 
-app.use("/api/products/", productsRoute);
 const port = process.env.PORT || 8000;
 app.listen(port, () => "server running on port");

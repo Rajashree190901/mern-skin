@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+input {
+  margin-top: 10px !important;
+  box-shadow: none !important;
+}
+
+.show > .dropdown-menu {
+  display: block;
+  position: absolute;
+}
